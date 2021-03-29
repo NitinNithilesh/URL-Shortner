@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get('/', async (req, res) => {
   const shortUrls = await ShortUrl.find();
-  res.render('index', { shortUrls: shortUrls });
+  res.render('index', { shortUrls: shortUrls, latestShortUrl: shortUrls[shortUrls.length - 1].short });
 })
 
 /* Posting a new long url into the db - get's triggered when the user pastes a link and clicks on shorten */
