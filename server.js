@@ -6,7 +6,7 @@ const ShortUrl = require('./models/shortUrl');
 const app = express();
 
 /* Connect Mongo DB with our app */
-mongoose.connect('mongodb+srv://nitin:nitin1234@cluster0.5igkx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+mongoose.connect('', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
